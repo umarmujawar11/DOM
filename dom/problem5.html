@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dynamic List</title>
+</head>
+
+<ul id="item-list"></ul>
+
+
+
+<input type="text" id="products" />
+<button onclick="addItem()">add item</button>
+
+<script>
+  function addItem() {
+    var ul = document.getElementById("item-list");
+    var products = document.getElementById("products");
+    var li = document.createElement("li");
+    li.setAttribute('id', products.value);
+    li.appendChild(document.createTextNode(products.value));
+    ul.appendChild(li);
+  }
+
+  function removeItem() {
+    var ul = document.getElementById("item-list");
+    var candidate = document.getElementById("products");
+    var item = document.getElementById(candidate.value);
+    ul.removeChild(item);
+  }
+</script>
+
+</html>

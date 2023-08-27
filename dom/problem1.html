@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creating elements</title>
+</head>
+<body>
+
+
+
+    <button onclick="helloDom()">click me</button>
+
+    <div id="container">
+        <!-- <h4>Hello,DOM!</h4> -->
+    </div>
+
+    <script>
+        function helloDom() {
+
+            const para = document.createElement("p");
+
+            const node = document.createTextNode("hello,DOM!");
+
+            para.appendChild(node);
+
+            document.getElementById("container").appendChild(para);
+        }
+    </script>
+
+</body>
+
+</html>

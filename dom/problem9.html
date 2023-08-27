@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic Content Toggle</title>
+</head>
+
+<body>
+    <button id="toggle-button">Toggle Button</button>
+    <p id="hidden-paragraph" style="display: none;">Create a toggle button that shows or hides a paragraph element with
+        the ID</p>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const hiddenParagraph = document.getElementById('hidden-paragraph');
+
+        toggleButton.addEventListener('click', () => {
+            if (hiddenParagraph.style.display === 'none') {
+                hiddenParagraph.style.display = 'block';
+            } else {
+                hiddenParagraph.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
